@@ -6,5 +6,5 @@ dfo <- summary(hfilt)
 dfo$totalCounts <- dfo$HCT116_1 +  dfo$HCT116_2
 dfo <- dfo[order(dfo$totalCounts, decreasing = TRUE),]
 write.table(head(dfo,100), file = "../output/HCT116_HiChIP_top100.tsv", row.names = FALSE,
-            col.names = TRUE, sep = "\t")
+            col.names = TRUE, sep = "\t", quote = FALSE)
 
